@@ -1,0 +1,171 @@
+.top-prrr{
+  display: flex; align-items: center; justify-content: space-between;
+}
+
+.conyai-top-rr{
+  display: flex; flex-wrap: wrap; justify-content: space-between;
+}
+
+.top-prrr a {
+  color: black; font-size: 14px;
+}
+
+.products {
+  width: calc((100% / 4) - 10px);
+  padding: 10px;
+  border-radius: 20px;
+  background-color: white;
+}
+
+.p-img {
+  overflow: hidden;
+  margin-bottom: 20px;
+  max-width: 204px; max-height: 204px;
+}
+
+.p-img img{
+  width: 100%; height: 100%;
+  border-radius: 20px;
+}
+
+.pbot-inf{
+  background-color: rgba(185, 185, 185, 0.281);
+  border-radius: 24px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.ven-br {
+  border-radius: 18px;
+  background-color: rgba(255, 255, 255, 0.771);
+  margin: 8px 8px;
+  width: 100%;
+  padding: 15px;
+  position: relative;
+}
+
+.ven-br .p-title {
+  font-size: 13px;
+  font-weight: bold;
+}
+
+.ven-br .p-des {
+  font-size: 12px;
+  margin-bottom: 12px;
+  color: rgba(69, 68, 68, 0.452);
+}
+
+.ven-br .p-price {
+  font-weight: bold;
+}
+
+.ven-br .cart-btn {
+  border-radius: 50%;
+  padding: 5px;
+  height: 40px;
+  width: 40px;
+  background-color: black;
+  color: white;
+  font-size: 20px;
+  display: flex; align-items: center; justify-content: center;
+  position: absolute;
+  bottom: 5px;
+  right: 5px;
+  cursor: pointer;
+}
+
+/* ------------ */
+
+.contai-right {
+  padding: 15px 20px 10px 20px;
+}
+
+.cart-contai {
+  margin-top: 24px;
+}
+
+.bx-dots-vertical-rounded {
+  text-align: right;
+  font-size: 20px;
+}
+
+.oro-in-cart {
+  display: flex;
+  align-items: center;
+  padding: 15px 0;
+  border-bottom: 1px solid var(--border-get);
+}
+
+.cart-contai .oro-in-cart:last-child {
+  border: none;
+}
+
+.oro-in-cart .bx-x {
+  font-size: 26px;
+  cursor: pointer;
+  margin-right: 10px;
+  color: dimgray;
+}
+
+.oro-in-cart .bx-x:hover{
+  color: black;
+}
+
+.img-pr-cr {
+  width: 60px;
+  height: 60px;
+  overflow: hidden;
+  border-radius: 10px;
+  margin-right: 20px;
+}
+
+.img-pr-cr img{
+  width: 100%; height: 100%;
+}
+
+.if-p-i-c .tt-p-i-c{
+  font-weight: 600;
+  margin-bottom: 5px;
+
+}
+
+.if-p-i-c .basic-p-i-c {
+  font-size: 12px;
+  margin-bottom: 10px;
+}
+
+.eigh-po {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.eigh-po .main-price {
+  font-weight: bold;
+  font-size: 14px;
+  margin-right: 10px;
+}
+
+.dip-qtt {
+  display: flex;
+  align-items: center;
+  border-radius: 12px;
+  column-gap: 10px;
+}
+
+.dip-qtt button {
+  background: none;
+  cursor: pointer;
+  padding: 3px;
+  border-radius: 50%;
+  border: 1px solid dimgrey;
+  display: flex; align-items:
+  center; justify-content: center;
+  color: dimgrey;
+}
+
+.dip-qtt .qtt-po {
+  font-size: 12px;
+  font-weight: bold;
+}

@@ -1,0 +1,159 @@
+<main>
+  <div class="past-left">
+    <br>
+
+    <div class="t-ju">
+      <ul class="my-orders">
+        <a [routerLink]="['home']" style="border-right: 4px solid rgb(124, 49, 246); color: rgb(124, 49, 246);">
+          <i class='bx bxs-home' ></i>
+          <p>Trang chủ</p>
+        </a>
+        <a [routerLink]="['store']">
+          <i class='bx bxs-food-menu'></i>
+          <p>Cửa hàng</p>
+        </a>
+        <a [routerLink]="['mycart']">
+          <i class='bx bx-cart-add'></i>
+          <p>Giỏ hàng của tôi</p>
+        </a>
+        <a>
+          <i class='bx bx-history'></i>
+          <p>Lịch sử</p>
+        </a>
+      </ul>
+
+      <ul class="my0set">
+        <li>
+          <i class='bx bxs-user-pin'></i>
+          <p>Hồ sơ</p>
+        </li>
+        <li>
+          <i class='bx bxs-cog'></i>
+          <p>Thiết lập</p>
+        </li>
+      </ul>
+
+      <br><br><br><br>
+
+      <ul class="my0set">
+        <li>
+          <i class='bx bxs-log-in-circle'></i>
+          <p>Đăng xuất</p>
+        </li>
+      </ul>
+
+    </div>
+  </div>
+
+  <div class="past-central">
+      <router-outlet></router-outlet>
+  </div>
+
+  <div class="past-right">
+
+    <div class="contai-right">
+
+      <div class="box-cart-all" *ngIf="!isHidden">
+        <h2 style="margin-top: 12px;">
+          Giỏ hàng của tôi
+        </h2>
+
+        <div class="cart-contai">
+
+          <div style="font-style: italic; color: rgba(0, 0, 0, 0.54);" *ngIf="products.length === 0">
+            Giỏ hàng rỗng
+          </div>
+
+          <div class="oro-in-cart" *ngFor="let product of products">
+
+            <i class='bx bx-x' (click)="remove(product.id)"></i>
+
+            <div class="img-pr-cr">
+              <img src="{{product.img}}" alt="">
+            </div>
+
+            <div class="if-p-i-c">
+              <p class="tt-p-i-c">{{product.name}}</p>
+              <p class="basic-p-i-c">{{product.price}}K</p>
+
+              <div class="eigh-po">
+
+                <p class="main-price">
+                  {{product.price * product.qtt}}
+                </p>
+
+                <div class="dip-qtt">
+                  <button (click)="reduceQtt(product.id)"><i class='bx bx-minus'></i></button>
+                  <p class="qtt-po">{{product.qtt}}</p>
+                  <button (click)="increaseQtt(product.id)"><i class='bx bx-plus'></i></button>
+                </div>
+
+              </div>
+            </div>
+
+          </div>
+
+        </div>
+
+        <div class="cart-total">
+
+          <div class="upcp-op">
+            <div class="top-text-p">
+              <p class="left-up">Tổng</p>
+              <p class="right-up">{{total}}K VND</p>
+            </div>
+            <div class="top-text-p">
+              <p class="left-up">Phụ phí</p>
+              <p class="right-up">{{phuphi}}K VND</p>
+            </div>
+          </div>
+
+          <div class="top-text-p hand-bot">
+            <p class="left-up bond-t">Tổng phụ</p>
+            <P class="right-up all-price">{{total + phuphi}}K VND</P>
+          </div>
+
+          <button [routerLink]="['payment']" class="checkout-btn">
+            Thanh toán
+          </button>
+
+        </div>
+      </div>
+
+      <div class="payment-cart" *ngIf="isHidden">
+        <div class="top-ben">
+          <h2 style="margin-top: 12px;">
+            Hóa đơn
+          </h2>
+          <br><br>
+          <div class="price-check">
+            <div class="upcp-op">
+              <div class="top-text-p">
+                <p class="left-up">Tổng</p>
+                <p class="right-up">{{total}}K VND</p>
+              </div>
+              <div class="top-text-p">
+                <p class="left-up">Phụ phí</p>
+                <p class="right-up">{{phuphi}}K VND</p>
+              </div>
+            </div>
+
+            <div class="top-text-p hand-bot">
+              <p class="left-up bond-t">Tổng phụ</p>
+              <P class="right-up all-price">{{total + phuphi}}K VND</P>
+            </div>
+          </div>
+        </div>
+
+        <button [routerLink]="['payment']" class="pay-btn" >
+          <p>Thanh toán bằng thẻ</p>
+          <i class='bx bxs-credit-card-alt'></i>
+        </button>
+      </div>
+
+    </div>
+
+  </div>
+
+</main>
+

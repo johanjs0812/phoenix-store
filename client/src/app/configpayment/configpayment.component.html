@@ -1,0 +1,179 @@
+<header>
+
+  <div class="ed-top">
+
+    <div class="des-brand">
+      PHOENIX STORE: CỬA HÀNG ĐỒ UỐNG CHẤT LƯỢNG HÀNG ĐẦU VIỆT NAM
+    </div>
+
+    <div class="logo">
+      <img src="https://th.bing.com/th/id/OIG3.BOCojGahFFotY0PylJ2U?pid=ImgGn" alt="">
+    </div>
+
+    <div class="cart-icon">
+      <div class="postio-p">
+        <i class='bx bx-cart'></i>
+        <p class="quantity-cart">5</p>
+      </div>
+    </div>
+
+  </div>
+
+  <br>
+
+  <div class="ed-bottom">
+    <a href="">CỬA HÀNG</a>
+    <i class='bx bx-chevron-right'></i>
+    <a href="">GIỎ HÀNG CỦA TÔI</a>
+    <i class='bx bx-chevron-right'></i>
+    <a href="">XÁC NHẬN THANH TOÁN</a>
+  </div>
+
+</header>
+
+<br><br>
+
+<main>
+  <h1>Xác nhận thanh toán</h1>
+  <br>
+  <br>
+  <br>
+
+  <div class="box-tong-quan">
+
+    <div class="left-container">
+
+      <div class="payment-detail">
+        <h2>CHI TIẾT THANH TOÁN</h2>
+        <form (ngSubmit)="onSubmit()" #paymentForm="ngForm">
+          <div class="form-group">
+            <label for="name">Tên:</label>
+            <br>
+            <input type="text" class="form-control" id="name" required [(ngModel)]="model.name" name="name" placeholder="Nhập tên thẻ">
+          </div>
+
+          <div class="form-group">
+            <label for="cardNumber">Số thẻ:</label>
+            <br>
+            <input type="number" class="form-control" id="cardNumber" required [(ngModel)]="model.cardNumber" name="cardNumber" placeholder="Nhập số thẻ">
+          </div>
+
+          <div class="form-group">
+            <label for="expirationDate">Ngày hết hạn:</label>
+            <br>
+            <input type="date" class="form-control" id="expirationDate" required [(ngModel)]="model.expirationDate" name="expirationDate" >
+          </div>
+
+          <div class="form-group">
+            <label for="cvv">CVV:</label>
+            <br>
+            <input type="text" class="form-control" id="cvv" required [(ngModel)]="model.cvv" name="cvv" placeholder="Nhập CVV">
+          </div>
+
+          <button type="submit" class="btn btn-primary">Thanh toán</button>
+        </form>
+
+
+
+      </div>
+
+    </div>
+
+    <div class="right-container">
+        <h2>HÓA ĐƠN CỦA BẠN</h2>
+        <br>
+        <div class="cart-contai">
+
+          <div class="product">
+
+            <div class="img-inf">
+              <div class="pro-img">
+                <img src="https://i.pinimg.com/564x/6a/e8/b7/6ae8b7ece690ea2ca0d7c9d3e2d1b1df.jpg" alt="">
+              </div>
+
+              <div class="box-inf-product">
+                <p>Nước cam siêu vip ông mặt trời</p>
+                <p>Lorem input vip product</p>
+              </div>
+            </div>
+
+            <div class="box-qtt">
+              <div class="quantity">
+                2
+              </div>
+            </div>
+
+            <div class="price">
+              142 K
+            </div>
+          </div>
+
+          <div class="product">
+
+            <div class="img-inf">
+              <div class="pro-img">
+                <img src="https://i.pinimg.com/564x/6a/e8/b7/6ae8b7ece690ea2ca0d7c9d3e2d1b1df.jpg" alt="">
+              </div>
+
+              <div class="box-inf-product">
+                <p>Nước cam siêu vip ông mặt trời</p>
+                <p>Lorem input vip product</p>
+              </div>
+            </div>
+
+            <div class="box-qtt">
+              <div class="quantity">
+                2
+              </div>
+            </div>
+
+            <div class="price">
+              142 K
+            </div>
+          </div>
+
+          <div class="product">
+
+            <div class="img-inf">
+              <div class="pro-img">
+                <img src="https://i.pinimg.com/564x/6a/e8/b7/6ae8b7ece690ea2ca0d7c9d3e2d1b1df.jpg" alt="">
+              </div>
+
+              <div class="box-inf-product">
+                <p>Nước cam siêu vip ông mặt trời</p>
+                <p>Lorem input vip product</p>
+              </div>
+            </div>
+
+            <div class="box-qtt">
+              <div class="quantity">
+                2
+              </div>
+            </div>
+
+            <div class="price">
+              142 K
+            </div>
+          </div>
+
+        </div>
+
+        <div class="bott-total">
+          <div class="to-poy">
+            <p>Tổng giá</p>
+            <p>210 K</p>
+          </div>
+          <div class="to-poy">
+            <p>Phụ phí</p>
+            <p>0 K</p>
+          </div>
+          <div class="to-poy check-last">
+            <p>Tổng thanh toán</p>
+            <p>210 K</p>
+          </div>
+        </div>
+
+    </div>
+  </div>
+
+</main>

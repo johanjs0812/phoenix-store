@@ -1,0 +1,48 @@
+<section>
+  <div class="top-prrr">
+    <h2>
+      {{title}}
+    </h2>
+    <a href="">Xem thêm</a>
+  </div>
+  <br>
+
+  <div class="conyai-top-rr">
+
+    <div class="products" *ngFor="let product of products;">
+
+      <div class="p-img">
+        <img src="{{product.img}}" alt="">
+      </div>
+
+      <div class="pbot-inf">
+
+        <div class="ven-br" style="max-width: 93%;">
+          <div class="p-title">
+            {{product.name}}
+          </div>
+          <div class="p-des"
+          style="
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            margin-bottom: 10px;
+            max-width: 150px;
+          ">{{product.des}}</div>
+          <div class="p-price">
+            {{product.price}}K VND
+          </div>
+
+          <div class="cart-btn" (click)="AddToCart($event, product)">
+            <i class='bx bx-cart-add'></i>
+          </div>
+        </div>
+
+      </div>
+
+
+    </div>
+
+  </div>
+
+</section>

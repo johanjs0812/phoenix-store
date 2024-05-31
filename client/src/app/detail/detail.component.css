@@ -1,0 +1,105 @@
+main {
+  height: 100vh;
+  overflow-y: scroll;
+
+}
+
+.padding-20px {
+  padding: 20px;
+}
+
+.center-detail-page {
+  display: flex;
+  justify-content: space-between;
+  padding-top: 10px;
+}
+
+.phanchiathienha {
+  width: calc((100% / 2) - 5px);
+}
+
+.box-inf-right {
+  padding-right: 60px;
+}
+
+.box-img-product{
+  display: flex;
+  justify-content: center;
+}
+
+.center-img {
+  max-width: 400px;
+  max-height: 400px;
+  overflow: hidden;
+  border-radius: 20px;
+}
+
+.center-img img {
+  height: 100%;
+  width: 100%;
+}
+
+/* ==================== */
+
+
+.des-product {
+  color: dimgrey;
+}
+
+.price {
+  font-size: 20px;
+  font-weight: 600;
+}
+
+.box-btn{
+  display: flex;
+  column-gap: 50px;
+}
+
+.box-quantt{
+  display: flex;
+  align-items: center;
+  column-gap: 10px;
+}
+
+.box-quantt i {
+  padding: 3px;
+  border: 1px solid dimgray;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  font-size: 14px
+}
+
+.add-to-cart {
+  display: flex;
+  align-items: center;
+  padding: 8px 15px;
+  border-radius: 8px;
+  background-color: var(--main-color);
+  color: white;
+  column-gap: 10px;
+  cursor: pointer;
+}
+
+.add-to-cart .bx-cart-add {
+  font-size: 18px;
+}
+
+.box-button {
+  display: flex;
+  column-gap: 10px;
+}
+
+.buy-product {
+  display: flex;
+  align-items: center;
+  padding: 8px 15px;
+  border-radius: 8px;
+  border: 1px solid dimgray;
+  column-gap: 10px;
+  cursor: pointer;
+  color: dimgray;
+}

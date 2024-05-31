@@ -1,0 +1,114 @@
+main{
+  padding-top: 70px;
+  width: 100%;
+  border-top: 1px solid var(--border-get);
+  margin-top: 50px;
+  padding-bottom: 70px;
+}
+
+.big-col-a {
+  width: calc((100% / 4) - 5px);
+}
+
+.big-col-b {
+  width: calc((100% / 3) - 5px);
+  display: flex;
+  justify-content: space-between;
+}
+
+.big-col-c {
+  width: calc((100% / 3) - 5px);
+}
+
+.col-ft {
+  width: calc((100% / 3) - 5px);
+}
+
+.conatiner {
+  display: flex;
+  justify-content: space-between;
+}
+
+.top-logo {
+  display: flex;
+  align-items: center;
+  margin-bottom: 24px;
+}
+
+.phoenix {
+  color: var(--main-color);
+  font-weight: bold;
+  margin-right: 5px;
+  font-size: 20px;
+}
+
+.store {
+  font-weight: bold;
+  font-size: 20px;
+}
+
+.big-col-a .xxx{
+  font-size: 14px;
+}
+
+.col-ft .top-title{
+  font-size: 16px;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+.phan-bung .ty-po{
+  margin-bottom: 10px;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+.oi-yu {
+  margin-bottom: 24px;
+  font-weight: bold;
+  font-size: 16px;
+}
+
+.cum-input{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 15px 50px 15px 15px;
+  background-color: white;
+  border-radius: 12px;
+  position: relative;
+  margin-bottom: 12px;
+}
+
+.cum-input input {
+  background: none; outline: none;
+  width: 100%;
+}
+
+.cum-input .bx-poy-ui {
+  background-color: black;
+  border-top-right-radius: 12px;
+  border-bottom-right-radius: 12px;
+  right: 0;
+  padding: 12px;
+  color: white;
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.cum-input .bx-poy-ui i {
+  font-size: 20px;
+}
+
+.cum-supp {
+  display: flex;
+  align-items: center;
+  column-gap: 10px;
+}
+
+.cum-supp a {
+  font-size: 14px;
+  color: black;
+}

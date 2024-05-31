@@ -1,0 +1,67 @@
+/* You can add global styles to this file, and also import other style files */
+:root{
+  --main-color: rgb(124, 49, 246);
+  --support-color: violet;
+  --main-border: rgba(0, 0, 0, 0.216);
+  --bg-color-main: rgba(165, 165, 165, 0.105);
+  --shadow-gap: 0 0px 8px 0 rgba(0, 0, 0, 0.1);
+  --border-get: rgba(42, 42, 42, 0.322);
+  --bg-nhat-color: rgba(176, 143, 239, 0.49);
+  --color-xam: rgb(54, 54, 54);
+  --btn-trash-defauld-color: rgba(67, 67, 67, 0.663);;
+  --btn-trash-defauld-color-hover: red;
+}
+
+
+*, *::before, *::after{
+  box-sizing: border-box;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  border: 0;
+}
+
+a{
+  text-decoration: none;
+}
+
+ol, ul {
+  list-style: none;
+}
+
+body {
+  font-family: 'Helvetica', sans-serif;
+}
+
+body.overflow-hidden {
+  overflow: hidden;
+}
+
+::-webkit-scrollbar {
+  width: 5px; /* Độ rộng của thanh cuộn */
+}
+
+::-webkit-scrollbar-track {
+  background: rgb(255, 255, 255); /* Màu nền của thanh cuộn */
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--main-color); /* Màu của phần cuộn được */
+}
+
+
+.ql-container {
+  background-color: #ffffff;
+  min-height: 300px;
+  width: 90vw;
+}
+
+.ql-editor {
+  color: #333;
+}
+
+.ql-toolbar {
+  background-color: #fff;
+}

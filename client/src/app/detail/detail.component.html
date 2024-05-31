@@ -1,0 +1,43 @@
+<main class="padding-20px">
+  <div class="center-detail-page">
+
+    <div class="box-img-product phanchiathienha">
+      <div class="center-img">
+        <img src="{{product.img}}" alt="">
+      </div>
+    </div>
+
+    <div class="box-inf-right phanchiathienha">
+      <div class="tangcontent">
+        <h1>{{product.name}}</h1>
+        <br><br>
+        <p class="des-product" [innerHTML]="product.des"></p>
+        <br><br>
+        <div class="box-btn">
+          <div class="box-quantt">
+            <i class='bx bx-minus'></i>
+            <p class="quantity">{{product.qtt}}</p>
+            <i class='bx bx-plus' ></i>
+          </div>
+        </div>
+        <br><br>
+        <p class="price">{{product.price}} VND</p>
+        <br>
+        <div class="box-button">
+          <button class="add-to-cart">
+            <p>Thêm vào giỏ hàng</p>
+            <i class='bx bx-cart-add'></i>
+          </button>
+          <button class="buy-product">
+            <p>Đặt hàng ngay</p>
+          </button>
+        </div>
+      </div>
+    </div>
+
+  </div>
+  <br><br><br><br>
+  <app-productsection [title]="title"></app-productsection>
+  <app-footer></app-footer>
+
+</main>

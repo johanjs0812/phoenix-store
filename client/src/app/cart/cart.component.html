@@ -1,0 +1,104 @@
+<div id="main" class="padding-20px">
+
+  <div class="top-box-op">
+
+    <h1>Giỏ hàng của bạn</h1>
+
+    <div class="box-filter">
+      <div class="popurso">
+        Chưa chọn tiêu chí nào
+      </div>
+      <button class="fillter">
+        <p class="name-ft">Bộ lọc</p>
+        <i class='bx bx-filter'></i>
+      </button>
+    </div>
+
+  </div>
+
+  <div class="categories_list">
+    <div class="box-cate">
+      <a class="cate-con" href="">
+        All
+      </a>
+
+      <a class="cate-con" href="">
+        Nước tăng lực
+      </a>
+
+      <a class="cate-con" href="">
+        Nước không có ga
+      </a>
+
+      <a class="cate-con" href="">
+        Ít đường
+      </a>
+
+      <a class="cate-con" href="">
+        Nước có ga
+      </a>
+    </div>
+
+    <div class="sort-by">
+      <p class="past-op">Sắp xếp theo: </p>
+      <div class="because">
+        <p>Giá</p>
+        <i class='bx bx-chevron-down'></i>
+      </div>
+    </div>
+
+  </div>
+
+  <div class="hr">
+    <div class="hr-child"></div>
+  </div>
+
+  <div class="container-product">
+
+    <div class="product"  *ngFor="let product of products">
+
+      <div class="ver-1">
+        <i class='bx bx-grid-vertical'></i>
+      </div>
+
+      <div class="ver-2">
+        <img src="{{product.img}}" alt="">
+      </div>
+
+      <div class="ver-3">
+
+        <div class="box-top-left">
+          <div class="box-inf-left" style="width: 100%;">
+            <p class="title-product">{{product.name}}</p>
+            <p class="des-product" style="
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            margin-bottom: 10px;
+            max-width: 600px;">{{product.des}}</p>
+          </div>
+          <div class="price" style="min-width: 100px;">
+            {{product.qtt * product.price}} K
+          </div>
+        </div>
+
+        <div class="box-bottom-product">
+          <div class="quantity-box">
+            <button class="btn-minus" (click)="reduceQtt(product.id)"><i class='bx bx-minus' ></i></button>
+            <p class="quantity">{{product.qtt}}</p>
+            <button class="btn-plus" (click)="increaseQtt(product.id)"><i class='bx bx-plus'></i></button>
+          </div>
+
+          <button class="btn-trash" (click)="remove(product.id)">
+            <i class='bx bx-trash' ></i>
+            <p class="text-trash">Xóa khỏi giỏ hàng</p>
+          </button>
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</div>

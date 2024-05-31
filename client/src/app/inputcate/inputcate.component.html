@@ -1,0 +1,18 @@
+<form class="form">
+  <h2>{{title}}</h2>
+  <br><br>
+  <div class="form-group bb">
+    <label for="name">Tên:</label>
+    <input type="text" id="name" name="name" class="form-control" placeholder="Tên danh mục" value="{{categoryName}}" (input)="onNameInputChange($event)">
+    <p class="warning cate-warr"></p>
+  </div>
+
+  <div class="form-group bb">
+    <label for="slug">Slug:</label>
+    <input type="text" id="slug" name="slug" class="form-control" placeholder="Ví dụ: FPT-NODE-JS" value="{{categorySlug}}" (input)="onSlugInputChange($event)">
+    <p class="warning slug-warr"></p>
+  </div>
+
+  <button [routerLink]="['/admin', 'categories']" (click)="add()" type="submit" *ngIf="isHidden">Thêm mới</button>
+  <button [routerLink]="['/admin', 'categories']" (click)="editCategory()" type="submit" *ngIf="!isHidden" >Lưu</button>
+</form>

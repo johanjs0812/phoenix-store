@@ -1,0 +1,50 @@
+<br><br>
+<h2>{{page}}</h2>
+
+<br><br>
+
+<div class="box-input">
+  <input type="text" [value]="name" placeholder="Tên sản phẩm" name="title" (input)="onTitleInputChange($event)" style="width: 100%;">
+</div>
+
+<br><br>
+
+<div class="box-img">
+  <i class='bx bxs-camera' *ngIf="imgHide" (click)="openFilePicker()"></i>
+  <p *ngIf="imgHide">Tải ảnh sản phẩm lên</p>
+  <input type="file" style="display: none;" name="img" #fileInput (change)="onFileSelected($event)">
+  <img *ngIf="!imgHide" [src]="imgSrc" alt="" srcset="">
+  <i (click)="openFilePicker()" *ngIf="!imgHide" class='bx bxs-edit-alt' ></i>
+</div>
+
+<br><br>
+
+<quill-editor [(ngModel)]="des"></quill-editor>
+
+<br><br>
+<div class="contai-x-x">
+
+  <div class="box-select">
+    <select class="styled-select" (change)="onOptionChange($event)">
+      <option value="" selected>Chưa chọn danh mục</option>
+      <ng-container *ngFor="let category of categories;">
+          <option [value]="category.id" [selected]="category.id === categoryId">{{category.name}}</option>
+      </ng-container>
+    </select>
+  </div>
+
+  <div class="price-box">
+    <input type="number" placeholder="Nhập giá" [value]="price" (input)="onPriceChange($event)">
+  </div>
+
+  <div class="quantity-box">
+    <input type="number" placeholder="Số lượng" [value]="quantity" (input)="onQuantityChange($event)">
+  </div>
+</div>
+
+<br><br>
+
+<button [routerLink]="['/admin', 'products']" (click)="edit()" *ngIf="!isHidden" class="typu">Lưu sản phẩm</button>
+<button [routerLink]="['/admin', 'products']" (click)="add()"  *ngIf="isHidden" class="typu">Thêm sản phẩm</button>
+
+<br><br>
